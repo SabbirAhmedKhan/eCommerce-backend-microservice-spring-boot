@@ -3,9 +3,7 @@ package com.sabbir.customer.model.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data @AllArgsConstructor
-public class ResponseDto {
-    private String statusCode;
 
-    private String statusMessage;
+public record ResponseDto(String statusCode, String statusMessage) {
+
 }

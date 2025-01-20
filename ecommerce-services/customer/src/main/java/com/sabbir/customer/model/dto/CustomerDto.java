@@ -1,11 +1,22 @@
 package com.sabbir.customer.model.dto;
 
-import com.sabbir.customer.model.entity.Address;
 
-public record CustomerDto(String firstName,
-                          String lastName,
-                          String email,
-                          String mobileNumber,
-                          AddressDto address){
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+public record CustomerDto(
+        @NotNull(message = "First name is required")
+        @Size(min = 3, max = 30, message = "First name must be between 3 and 30 characters")
+        String firstName,
+        @NotNull(message = "Last name is required")
+        @Size(min = 3, max = 30, message = "First name must be between 3 and 30 characters")
+        String lastName,
+        @Email(message = "Email should be valid address")
+        String email,
+        @Pattern(regexp = "[0-9]{11}", message = "Mobile number should be 11 digits")
+        String mobileNumber,
+        AddressDto address){
 
 }

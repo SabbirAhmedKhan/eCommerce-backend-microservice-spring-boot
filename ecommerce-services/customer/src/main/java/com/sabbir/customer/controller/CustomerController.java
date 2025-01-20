@@ -2,15 +2,19 @@ package com.sabbir.customer.controller;
 
 import com.sabbir.customer.model.dto.CustomerDto;
 import com.sabbir.customer.service.CustomerService;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequestMapping("api/v1/customer")
+@Validated
 
 public class CustomerController {
     private static final Logger logger =  LoggerFactory.getLogger(CustomerController.class);
@@ -21,12 +25,12 @@ public class CustomerController {
     }
 
     @PostMapping("/createCustomer")
-    public ResponseEntity<Long> createCustomer(@RequestBody CustomerDto customerDto) {
+    public ResponseEntity<Long> createCustomer(@Valid @RequestBody CustomerDto customerDto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(customerService.createCustomer(customerDto));
     }
 
     @PutMapping("/updateCustomer")
-    public ResponseEntity<Boolean> updateCustomer(@RequestBody CustomerDto customerDto) {
+    public ResponseEntity<Boolean> updateCustomer(@Valid @RequestBody CustomerDto customerDto) {
         return ResponseEntity.status(HttpStatus.OK).body(customerService.updateCustomer(customerDto));
     }
 
@@ -37,6 +41,7 @@ public class CustomerController {
 
     @GetMapping("/fetchCustomer/{mobileNumber}")
     public ResponseEntity<CustomerDto> fetchCustomer(@PathVariable String mobileNumber) {
+        System.out.println("delete called");
         return ResponseEntity.status(HttpStatus.OK).body(customerService.fetchCustomer(mobileNumber));
     }
 
@@ -44,4 +49,10 @@ public class CustomerController {
     public ResponseEntity<CustomerDto> fetchCustomer(@RequestParam Long customerId) {
         return ResponseEntity.status(HttpStatus.OK).body(customerService.fetchCustomer(customerId));
     }
+
+    @GetMapping("/fetchCustomer/mobileNumber")
+    public ResponseEntity<CustomerDto> fetchCustomerByMobileNumber(@RequestParam @Pattern(regexp = "[0-9]{11}") String mobileNumber) {
+        return ResponseEntity.status(HttpStatus.OK).body(customerService.fetchCustomer(mobileNumber));
+    }
+
 }

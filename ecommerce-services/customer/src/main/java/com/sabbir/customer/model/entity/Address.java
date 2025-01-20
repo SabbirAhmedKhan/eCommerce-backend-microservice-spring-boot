@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Address {
+public class Address{
 
     private String houseNumber;
     private String roadNumber;
