@@ -2,11 +2,13 @@ package com.sabbir.customer.service.impl;
 
 import com.sabbir.customer.exception.CustomerAlreadyExistsException;
 import com.sabbir.customer.exception.ResourceNotFoundException;
+import com.sabbir.customer.mapper.AddressMapper;
 import com.sabbir.customer.mapper.CustomerMapper;
 import com.sabbir.customer.model.dto.CustomerDto;
 import com.sabbir.customer.model.entity.Customer;
 import com.sabbir.customer.repository.CustomerRepository;
 import com.sabbir.customer.service.CustomerService;
+import io.micrometer.common.util.StringUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -32,11 +34,14 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDto fetchCustomer(String mobileNumber) {
-        Optional<Customer> customerOptional = customerRepository.findByMobileNumber(mobileNumber);
-        if(!customerOptional.isPresent()) {
-            throw new ResourceNotFoundException("Customer", "mobile Number", mobileNumber);
-        }
-        return CustomerMapper.mapToCustomerDto(customerOptional.get());
+//        Optional<Customer> customerOptional = customerRepository.findByMobileNumber(mobileNumber);
+//        if(!customerOptional.isPresent()) {
+//            throw new ResourceNotFoundException("Customer", "mobile Number", mobileNumber);
+//        }
+//        return CustomerMapper.mapToCustomerDto(customerOptional.get());
+        return this.customerRepository.findByMobileNumber(mobileNumber)
+                .map(CustomerMapper::mapToCustomerDto)
+                .orElseThrow(() -> new ResourceNotFoundException("Customer", "mobile Number", mobileNumber));
     }
 
     @Override
@@ -51,15 +56,31 @@ public class CustomerServiceImpl implements CustomerService {
         return CustomerMapper.mapToCustomerDto(customer);
     }
 
+    private void mergeCustomer(Customer customer, CustomerDto customerDto) {
+        if(StringUtils.isNotBlank(customerDto.firstName())) {
+            customer.setFirstName(customerDto.firstName());
+        }
+        if(StringUtils.isNotBlank(customerDto.lastName())) {
+            customer.setLastName(customerDto.lastName());
+        }
+        if(StringUtils.isNotBlank(customerDto.email())) {
+            customer.setEmail(customerDto.email());
+        }
+        if(StringUtils.isNotBlank(customerDto.mobileNumber())) {
+            customer.setMobileNumber(customerDto.mobileNumber());
+        }
+        if(customerDto.address() != null) {
+            customer.setAddress(AddressMapper.mapToAddress(customerDto.address()));
+        }
+    }
+
     @Override
     public Boolean updateCustomer(CustomerDto customerDto) {
         Boolean isUpdated = false;
-        Optional<Customer> customerOptional = customerRepository.findByMobileNumber(customerDto.mobileNumber());
-        if(!customerOptional.isPresent()) {
-            new ResourceNotFoundException("Customer", "mobile Number", customerDto.mobileNumber());
-        }
-        Customer customer = CustomerMapper.mapToCustomer(customerDto);
-        customer.setCustomerId(customerOptional.get().getCustomerId());
+        Customer customer = customerRepository.findByMobileNumber(customerDto.mobileNumber()).orElseThrow(
+                () -> new ResourceNotFoundException("Customer", "mobile Number", customerDto.mobileNumber())
+        );
+        mergeCustomer(customer, customerDto);
         customerRepository.save(customer);
         return true;
     }
