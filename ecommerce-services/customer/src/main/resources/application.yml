@@ -1,3 +1,5 @@
+server:
+    port: 8080
 spring:
     application:
         name: customer
@@ -14,8 +16,29 @@ spring:
         show-sql: true
         database-platform: org.hibernate.dialect.MySQLDialect
         open-in-view: false
-server:
-    port: 8080
+    config:
+        import:
+            - "application_qa.yml"
+            - "application_prod.yml"
+    profiles:
+        active:
+            - "qa"
+
+
+build:
+    version: "3.0.0"
+
+customer:
+    message: "Welcome to customer service"
+    contactDetails:
+        name: "sabbir"
+        email: "sabbir@in.com"
+        phone: "1234567890"
+    onCallSupport:
+        - 012587
+        - 012588
+
+
 #logging:
 #    level:
 #        org.hibernate: DEBUG
