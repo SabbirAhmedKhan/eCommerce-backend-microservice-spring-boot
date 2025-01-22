@@ -1,0 +1,7 @@
+package com.sabbir.product.repository;
+
+import com.sabbir.product.model.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product, Long>{
+}
