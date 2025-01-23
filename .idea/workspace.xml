@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/model/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/model/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/model/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/model/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/model/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/service/impl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

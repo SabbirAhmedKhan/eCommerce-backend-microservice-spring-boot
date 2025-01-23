@@ -10,7 +10,7 @@ public class ProductMapper {
 
     public static Product mapToProduct(ProductViewRequestDto productViewResponseDto) {
         return Product.builder()
-                .productId(productViewResponseDto.id())
+//                .productId(productViewResponseDto.id())
                 .name(productViewResponseDto.name())
                 .description(productViewResponseDto.description())
                 .quantityAvailable(productViewResponseDto.availableQuantity())

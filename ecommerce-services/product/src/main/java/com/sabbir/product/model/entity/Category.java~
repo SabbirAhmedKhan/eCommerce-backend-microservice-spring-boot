@@ -23,7 +23,7 @@ public class Category {
     private String description;
 
 //    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "category", fetch = FetchType.EAGER)
-    @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "category", fetch = FetchType.EAGER)
     @JsonManagedReference
     private List<Product> products; // OneToMany relationship with Product class (Many products can belong to one category>
 }

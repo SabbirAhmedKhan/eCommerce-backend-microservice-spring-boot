@@ -27,12 +27,16 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Long createProduct(ProductViewRequestDto productViewRequestDto) {
+//        productViewRequestDto.id(null);
         return productRepository.save(ProductMapper.mapToProduct(productViewRequestDto)).getProductId();
     }
 
     @Override
 //    @Transactional
     public List<ProductViewResponseDto> findAll() {
+        System.out.println("findAll called");
+        System.out.println("All products: " + productRepository.findAll());
+
         return productRepository.findAll()
                 .stream()
                 .map(ProductMapper::mapToProductViewResponseDto)
