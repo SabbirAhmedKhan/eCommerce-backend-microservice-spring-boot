@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/model/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/model/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/model/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/model/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/src/main/java/com/sabbir/customer/CustomerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/src/test/java/com/sabbir/customer/CustomerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/customer/CustomerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/test/java/com/sabbir/customer/CustomerApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
