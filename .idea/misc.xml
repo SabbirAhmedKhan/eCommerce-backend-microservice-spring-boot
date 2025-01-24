@@ -14,6 +14,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/ecommerce-services/notification/pom.xml" />
+        <option value="$PROJECT_DIR$/ecommerce-services/payment/pom.xml" />
       </set>
     </option>
   </component>

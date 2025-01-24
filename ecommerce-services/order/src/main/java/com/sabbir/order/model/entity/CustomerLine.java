@@ -1,0 +1,26 @@
+package com.sabbir.order.model.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+public class CustomerLine {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private CustomerOrder customerOrder;
+
+    private Integer productId;
+
+    private double quantity;
+
+}
