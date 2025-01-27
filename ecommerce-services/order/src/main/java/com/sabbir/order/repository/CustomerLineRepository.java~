@@ -1,2 +1,0 @@
-package com.sabbir.order.repository;public interface CustomerLineRepository {
-}

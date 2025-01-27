@@ -1,0 +1,16 @@
+package com.sabbir.order.restClient;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.Optional;
+
+@FeignClient(
+        name = "customer-service",
+        url = "${application.config.customer-url}" //TODO: update
+)
+public interface CustomerClient {
+
+    @GetMapping("/{customer-id}")
+    Optional<CustomerClientResponse> fetchCustomer(@PathVariable("customer-id") Long customerId)>
+}

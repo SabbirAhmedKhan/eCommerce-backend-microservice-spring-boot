@@ -58,8 +58,13 @@ public class CustomerController {
         return ResponseEntity.status(HttpStatus.OK).body(customerService.fetchCustomer(mobileNumber));
     }
 
-    @GetMapping("/fetchCustomer")
-    public ResponseEntity<CustomerDto> fetchCustomer(@RequestParam Long customerId) {
+//    @GetMapping("/fetchCustomer")
+//    public ResponseEntity<CustomerDto> fetchCustomer(@RequestParam Long customerId) {
+//        return ResponseEntity.status(HttpStatus.OK).body(customerService.fetchCustomer(customerId));
+//    }
+
+    @GetMapping("/${customer-id}")
+    public ResponseEntity<CustomerDto> fetchCustomer(@PathVariable("customer-id") Long customerId) {
         return ResponseEntity.status(HttpStatus.OK).body(customerService.fetchCustomer(customerId));
     }
 

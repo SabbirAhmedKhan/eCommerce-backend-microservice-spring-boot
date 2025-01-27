@@ -1,0 +1,15 @@
+package com.sabbir.order.restClient;
+
+import lombok.RequiredArgsConstructor;
+import lombok.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+@RequiredArgsConstructor
+public class ProductClient {
+    @Value("${application.config.product-url}")
+    private String productUrl;
+    private final RestTemplate restTemplate;
+
+}
