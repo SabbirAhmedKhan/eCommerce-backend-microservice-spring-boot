@@ -19,5 +19,5 @@ public record OrderRequestDto(Integer id,
                               @NotBlank(message = "Customer should be present")
                               String customerId,
                               @NotEmpty(message = "You should at least purchase one product")
-                              List<PurchaseRequest> products) {
+                              List<PurchaseRequestDto> products) {
 }

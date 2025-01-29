@@ -2,7 +2,7 @@ package com.sabbir.order.model.dto;
 
 import java.math.BigDecimal;
 
-public record PurchaseResponse(
+public record PurchaseResponseDto(
         Integer productId,
         String name,
         String description,
