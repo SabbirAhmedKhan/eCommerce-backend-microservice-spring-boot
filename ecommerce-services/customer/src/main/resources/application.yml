@@ -2,7 +2,9 @@ server:
     port: 8080
 spring:
     application:
-        name: customer
+        name: "customer"
+    profiles:
+        active: "prod"
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://localhost:3306/ecommerce?createDatabaseIfNotExist=true&useSSL=false
@@ -17,26 +19,21 @@ spring:
         database-platform: org.hibernate.dialect.MySQLDialect
         open-in-view: false
     config:
-        import:
-            - "application_qa.yml"
-            - "application_prod.yml"
-    profiles:
-        active:
-            - "qa"
+        import: "optional:configserver:http://localhost:8888/"
 
 
-build:
-    version: "3.0.0"
-
-customer:
-    message: "Welcome to customer service"
-    contactDetails:
-        name: "sabbir"
-        email: "sabbir@in.com"
-        phone: "1234567890"
-    onCallSupport:
-        - 012587
-        - 012588
+#build:
+#    version: "3.0.0"
+#
+#customer:
+#    message: "Welcome to customer service"
+#    contactDetails:
+#        name: "sabbir"
+#        email: "sabbir@in.com"
+#        phone: "1234567890"
+#    onCallSupport:
+#        - 012587
+#        - 012588
 
 
 #logging:

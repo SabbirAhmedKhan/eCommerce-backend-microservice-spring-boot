@@ -1,13 +1,8 @@
-spring:
- config:
-  activate:
-   on-profile: "qa"
-
 build:
- version: "12.0"
+ version: "5.0(prod)"
 
 customer:
- message: "Welcome to customer service, Hello"
+ message: "Welcome to customer service, Hello(prod) "
  contactDetails:
   name: "Sabbir Ahmed"
   email: "sabbir@gmail.com"

@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/ecommerce-services/order/pom.xml" />
         <option value="$PROJECT_DIR$/ecommerce-services/customer/pom.xml" />
         <option value="$PROJECT_DIR$/ecommerce-services/product/pom.xml" />
+        <option value="$PROJECT_DIR$/ecommerce-services/configserver/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

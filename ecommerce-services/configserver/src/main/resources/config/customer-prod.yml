@@ -1,16 +1,12 @@
-spring:
- config:
-  activate:
-   on-profile: "prod"
-
 build:
- version: "5.0"
+ version: "5.0(prod)"
 
 customer:
- message: "Welcome to customer service, Hello "
+ message: "Welcome to customer service, Hello(prod) "
  contactDetails:
   name: "Sabbir Ahmed"
   email: "sabbir@gmail.com"
+  mobileNumber: "01325698755"
  onCallSupport:
   - 01325698755
   - 01963458223

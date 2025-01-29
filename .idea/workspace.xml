@@ -6,14 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/OrderRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/OrderRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/PurchaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/PurchaseRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/PurchaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/PurchaseResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/ProductClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application_prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application_qa.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/PaymentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/PaymentApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Record" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -47,13 +49,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ConfigserverApplication.executor": "Debug",
     "Application.CustomerApplication.executor": "Debug",
     "Application.ProductApplication.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.codeium.enabled": "true",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot"
+    "last_opened_file_path": "D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/ecommerce-services/configserver/src/main/resources/config"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -61,14 +64,32 @@
       <recent name="com.sabbir.product.model.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\configserver\src\main\resources\config" />
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\payment\src\main\java\com\sabbir\payment\exception" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\order\src\main\java\com\sabbir\order\model\dto" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\order\src\main\java\com\sabbir\order\exception" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\product\src\main\java\com\sabbir\product\model\dto" />
-      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\product\src\main\java\com\sabbir\product\exception" />
-      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\product\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sabbir.payment.repository" />
+      <recent name="com.sabbir.payment.model.dto" />
+      <recent name="com.sabbir.payment.audit" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProductApplication">
+  <component name="RunManager" selected="Application.CustomerApplication">
+    <configuration name="ConfigserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.configserver.ConfigserverApplication" />
+      <module name="configserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sabbir.customer.CustomerApplication" />
       <module name="customer" />
@@ -97,8 +118,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductApplication" />
         <item itemvalue="Application.CustomerApplication" />
+        <item itemvalue="Application.ConfigserverApplication" />
+        <item itemvalue="Application.ProductApplication" />
       </list>
     </recent_temporary>
   </component>

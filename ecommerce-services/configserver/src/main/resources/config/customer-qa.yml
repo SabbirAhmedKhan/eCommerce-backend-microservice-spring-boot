@@ -1,0 +1,12 @@
+build:
+ version: "12.0(qa)"
+
+customer:
+ message: "Welcome to customer service, Hello (qa)"
+ contactDetails:
+  name: "Sabbir Ahmed"
+  email: "sabbir@gmail.com"
+  mobileNumber: "01325698755"
+ onCallSupport:
+  - 01325698755
+  - 01963458223

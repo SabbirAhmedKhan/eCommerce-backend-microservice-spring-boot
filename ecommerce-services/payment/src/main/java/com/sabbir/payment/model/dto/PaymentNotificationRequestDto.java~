@@ -1,0 +1,2 @@
+package com.sabbir.payment.model.dto;public record PaymentNotificationRequestDto() {
+}
