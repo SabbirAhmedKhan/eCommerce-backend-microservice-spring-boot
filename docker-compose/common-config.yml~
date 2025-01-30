@@ -1,0 +1,35 @@
+services:
+ network-deploy-service:
+  networks:
+   - network-ecommerce
+
+ microservice-db-config:
+  extends:
+   service: microservice-db-config
+  image: mysql
+  healthcheck:
+   test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+   interval: 5s
+   timeout: 5s
+   retries: 10
+   start_period: 20s
+  environment:
+   MYSQL_ROOT_PASSWORD: root
+
+ microservice-base-config:
+  extends:
+   service: microservice-base-config
+  deploy:
+   resources:
+    limits:
+     memory: 700m
+
+ microservice-configserver-config:
+  extends:
+   service: microservice-base-config
+  environment:
+   SPRING_PROFILES_ACTIVE: qa
+   SPRING_CONFIG_IMPORT: optional:configserver:http://localhost:8888/
+   SPRING_DATASOURCE_USERNAME: root
+   SPRING_DATASOURCE_PASSWORD: root
+
