@@ -1,6 +1,5 @@
 package com.sabbir.payment.exception;
 
-import com.sabbir.customer.model.dto.ErrorResponseDto;
 import com.sabbir.payment.model.dto.ErrorResponseDto;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
