@@ -15,10 +15,9 @@ import java.math.BigDecimal;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @NoArgsConstructor
-@Table(name = "payment")
 public class Payment extends BaseEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private BigDecimal amount;

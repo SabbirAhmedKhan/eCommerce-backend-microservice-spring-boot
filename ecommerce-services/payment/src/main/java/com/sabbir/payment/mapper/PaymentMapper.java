@@ -11,7 +11,6 @@ public class PaymentMapper {
             return null;
         }
         return Payment.builder()
-                .id(paymentRequestDto.id())
                 .amount(paymentRequestDto.amount())
                 .paymentMethod(paymentRequestDto.paymentMethod())
                 .orderId(paymentRequestDto.orderId())
