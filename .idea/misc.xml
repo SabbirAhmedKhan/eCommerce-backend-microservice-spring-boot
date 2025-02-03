@@ -10,12 +10,8 @@
         <option value="$PROJECT_DIR$/ecommerce-services/customer/pom.xml" />
         <option value="$PROJECT_DIR$/ecommerce-services/product/pom.xml" />
         <option value="$PROJECT_DIR$/ecommerce-services/configserver/pom.xml" />
+        <option value="$PROJECT_DIR$/ecommerce-services/eurekaserver/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/ecommerce-services/notification/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
