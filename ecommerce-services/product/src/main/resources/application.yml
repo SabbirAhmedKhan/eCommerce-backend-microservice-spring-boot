@@ -3,6 +3,8 @@ server:
 spring:
     application:
         name: product
+    profiles:
+        active: "prod"
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://localhost:3306/product?createDatabaseIfNotExist=true&useSSL=false
@@ -18,27 +20,6 @@ spring:
         open-in-view: false
     config:
         import: "optional:configserver:http://localhost:8888/"
-#    config:
-#        import:
-#            - "application_qa.yml"
-#            - "application_prod.yml"
-#    profiles:
-#        active:
-#            - "qa"
-
-
-build:
-    version: "3.0.0"
-
-customer:
-    message: "Welcome to customer service"
-    contactDetails:
-        name: "sabbir"
-        email: "sabbir@in.com"
-        phone: "1234567890"
-    onCallSupport:
-        - 012587
-        - 012588
 
 
 management:
@@ -68,10 +49,3 @@ info:
         description: "Product Service"
         version: "1.0.0"
 
-
-
-
-#logging:
-#    level:
-#        org.hibernate: DEBUG
-#        org.springframework.orm.jpa: DEBUG
