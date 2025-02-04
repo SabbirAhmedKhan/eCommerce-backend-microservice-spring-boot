@@ -17,11 +17,12 @@ import java.util.List;
 public class CustomerOrderController {
     private final CustomerOrderService customerOrderService;
 
+    @PostMapping("/createOrder")
     public ResponseEntity<Integer> createOrder(@RequestBody OrderRequestDto orderRequestDto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(customerOrderService.createOrder(orderRequestDto));
     }
 
-    @GetMapping
+    @GetMapping("/findAllCustomerOrder")
     public ResponseEntity<List<OrderResponseDto>> findAllCustomerOrder() {
         return ResponseEntity.ok(customerOrderService.findAllCustomerOrder());
     }

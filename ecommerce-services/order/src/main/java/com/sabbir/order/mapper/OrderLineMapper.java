@@ -8,7 +8,6 @@ import com.sabbir.order.model.entity.CustomerOrder;
 public class OrderLineMapper {
     public static CustomerLine mapToOrderLine(OrderLineRequestDto orderLineRequestDto) {
         return CustomerLine.builder()
-                .id(orderLineRequestDto.orderId())
                 .productId(orderLineRequestDto.productId())
                 .customerOrder(
                         CustomerOrder.builder()

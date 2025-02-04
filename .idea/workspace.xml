@@ -4,24 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="">
+    <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="&quot;Fixing database insertion issue in paymentservice&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/order.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/order.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/payment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/payment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/notification/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/OrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/controller/CustomerOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/controller/CustomerOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/mapper/OrderLineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/mapper/OrderLineMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/entity/CustomerLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/entity/CustomerLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/entity/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/entity/CustomerOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/repository/CustomerLineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/repository/CustomerLineRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/repository/CustomerOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/repository/CustomerOrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/CustomerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/CustomerClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/PaymentClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/PaymentClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerLineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerLineServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,21 +56,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ConfigserverApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.CustomerApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.EurekaserverApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.OrderApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.PaymentApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.ProductApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/ecommerce-services/configserver/src/main/resources/config&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConfigserverApplication.executor": "Debug",
+    "Application.CustomerApplication.executor": "Debug",
+    "Application.EurekaserverApplication.executor": "Debug",
+    "Application.NotificationApplication.executor": "Debug",
+    "Application.OrderApplication.executor": "Debug",
+    "Application.PaymentApplication.executor": "Debug",
+    "Application.ProductApplication.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/ecommerce-services/configserver/src/main/resources/config",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2954023",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sabbir.product.model.dto" />
@@ -86,7 +93,7 @@
       <recent name="com.sabbir.payment.audit" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PaymentApplication">
+  <component name="RunManager" selected="Application.OrderApplication">
     <configuration name="ConfigserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sabbir.configserver.ConfigserverApplication" />
       <module name="configserver" />
@@ -106,6 +113,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sabbir.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.notification.NotificationApplication" />
+      <module name="notification" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.notification.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,26 +159,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sabbir.product.ProductApplication" />
-      <module name="product" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sabbir.product.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PaymentApplication" />
-        <item itemvalue="Application.ConfigserverApplication" />
-        <item itemvalue="Application.EurekaserverApplication" />
         <item itemvalue="Application.OrderApplication" />
-        <item itemvalue="Application.ProductApplication" />
+        <item itemvalue="Application.NotificationApplication" />
+        <item itemvalue="Application.EurekaserverApplication" />
+        <item itemvalue="Application.ConfigserverApplication" />
+        <item itemvalue="Application.PaymentApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +178,28 @@
       <option name="presentableId" value="Default" />
       <updated>1737514943828</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;Adding eureka server registration in Payment service&quot;">
+      <option name="closed" value="true" />
+      <created>1738577634137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738577634137</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;Fixing database insertion issue in paymentservice&quot;">
+      <option name="closed" value="true" />
+      <created>1738582244727</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738582244727</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Adding eureka server registration in Payment service&quot;" />
+    <MESSAGE value="&quot;Fixing database insertion issue in paymentservice&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Fixing database insertion issue in paymentservice&quot;" />
   </component>
 </project>

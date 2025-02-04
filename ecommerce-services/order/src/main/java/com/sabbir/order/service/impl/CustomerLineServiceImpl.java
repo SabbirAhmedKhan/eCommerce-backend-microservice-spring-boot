@@ -21,7 +21,7 @@ public class CustomerLineServiceImpl implements CustomerLineService {
 
     @Override
     public List<OrderLineResponseDto> findAllByOrderId(Integer orderId) {
-        return customerLineRepository.findAllByOrderId(orderId)
+        return customerLineRepository.findAllByCustomerOrderId(orderId)
                 .stream()
                 .map(OrderLineMapper::mapToOrderLineResponseDto)
                 .toList();

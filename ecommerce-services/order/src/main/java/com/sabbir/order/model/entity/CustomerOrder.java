@@ -20,7 +20,7 @@ import java.util.List;
 @Entity
 public class CustomerOrder extends BaseEntity{
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(unique = true,  nullable = false)
@@ -33,6 +33,6 @@ public class CustomerOrder extends BaseEntity{
 
     private String customerId;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "customerOrder", fetch = FetchType.LAZY)
     private List<CustomerLine> orderLines;
 }

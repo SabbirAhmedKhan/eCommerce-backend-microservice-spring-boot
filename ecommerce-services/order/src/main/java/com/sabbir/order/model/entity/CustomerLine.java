@@ -16,7 +16,7 @@ public class CustomerLine {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "customerOrder_id")
     private CustomerOrder customerOrder;
 
     private Integer productId;

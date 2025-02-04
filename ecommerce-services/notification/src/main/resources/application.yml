@@ -1,6 +1,3 @@
-server:
- port: 8089
-
 spring:
  application:
   name: "notification"
@@ -29,8 +26,6 @@ eureka:
 
 info:
  app:
-  name: "customer"
-  description: "Customer Service"
+  name: "Order"
+  description: "Order Service"
   version: "1.0.0"
-
-

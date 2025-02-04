@@ -7,7 +7,6 @@ import com.sabbir.order.model.entity.CustomerOrder;
 public class OrderMapper {
     public static CustomerOrder mapToOrder(OrderRequestDto orderRequestDto) {
         return CustomerOrder.builder()
-                .id(orderRequestDto.id())
                 .reference(orderRequestDto.reference())
                 //.totalAmount(orderRequestDto.amount())
                 .paymentMethod(orderRequestDto.paymentMethod())
