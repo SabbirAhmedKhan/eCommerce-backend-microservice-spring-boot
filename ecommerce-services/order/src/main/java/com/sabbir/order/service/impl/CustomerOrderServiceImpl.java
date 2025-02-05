@@ -2,9 +2,11 @@ package com.sabbir.order.service.impl;
 
 import com.sabbir.order.exception.ResourceNotFoundException;
 import com.sabbir.order.mapper.OrderMapper;
+import com.sabbir.order.model.dto.CustomerResponseDto;
 import com.sabbir.order.model.dto.OrderRequestDto;
 import com.sabbir.order.model.dto.OrderResponseDto;
 import com.sabbir.order.repository.CustomerOrderRepository;
+import com.sabbir.order.restClient.CustomerClient;
 import com.sabbir.order.service.CustomerOrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomerOrderServiceImpl implements CustomerOrderService {
     private final CustomerOrderRepository customerOrderRepository;
+    private final CustomerClient customerClient;
 
     @Override
     @Transactional
@@ -33,5 +36,12 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
     public OrderResponseDto findCustomerOrderById(Integer id) {
         return customerOrderRepository.findById(id).map(OrderMapper::mapToOrderResponseDto).orElseThrow(
                 ()-> new ResourceNotFoundException("Order", "id", id.toString()));
+    }
+
+    @Override
+    public CustomerResponseDto findCustomer(Long id) {
+        return customerClient.fetchCustomer(id).orElseThrow(
+                () -> new ResourceNotFoundException("Customer", "id", id.toString())
+        );
     }
 }

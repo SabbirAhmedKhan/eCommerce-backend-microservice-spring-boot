@@ -26,6 +26,6 @@ eureka:
 
 info:
  app:
-  name: "Order"
-  description: "Order Service"
+  name: "Notification Service"
+  description: "Notification Service"
   version: "1.0.0"

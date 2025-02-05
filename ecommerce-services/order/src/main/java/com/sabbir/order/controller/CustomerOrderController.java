@@ -1,5 +1,6 @@
 package com.sabbir.order.controller;
 
+import com.sabbir.order.model.dto.CustomerResponseDto;
 import com.sabbir.order.model.dto.OrderRequestDto;
 import com.sabbir.order.model.dto.OrderResponseDto;
 import com.sabbir.order.service.CustomerOrderService;
@@ -32,5 +33,10 @@ public class CustomerOrderController {
             @PathVariable("order-id") Integer orderId
     ) {
         return ResponseEntity.ok(customerOrderService.findCustomerOrderById(orderId));
+    }
+
+    @GetMapping("findCustomer/{customer-id}")
+    public ResponseEntity<CustomerResponseDto> findCustomer(@PathVariable("customer-id") Long customerId) {
+        return ResponseEntity.ok(customerOrderService.findCustomer(customerId));
     }
 }
