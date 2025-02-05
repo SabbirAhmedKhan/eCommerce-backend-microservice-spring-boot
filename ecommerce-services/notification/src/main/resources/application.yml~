@@ -1,9 +1,8 @@
 spring:
  application:
-  name: "order"
+  name: "notification"
  config:
-  import: optional:configserver:http://localhost:8888
-
+  import: "optional:configserver:http://localhost:8888/"
 
 management:
  endpoints:
@@ -15,7 +14,6 @@ management:
    enabled: true
  endpoint:
   access: unrestricted
-
 
 eureka:
  instance:
@@ -31,6 +29,3 @@ info:
   name: "Order"
   description: "Order Service"
   version: "1.0.0"
-
-
-#debug: true
