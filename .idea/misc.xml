@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/ecommerce-services/product/pom.xml" />
         <option value="$PROJECT_DIR$/ecommerce-services/configserver/pom.xml" />
         <option value="$PROJECT_DIR$/ecommerce-services/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/ecommerce-services/gatewayserver/pom.xml" />
       </list>
     </option>
   </component>

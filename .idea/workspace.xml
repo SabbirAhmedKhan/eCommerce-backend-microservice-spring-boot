@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="&quot;Register order service in eureka server&quot;">
+    <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/notification/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/controller/CustomerOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/controller/CustomerOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/CustomerResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/CustomerResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/CustomerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/CustomerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/CustomerOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/CustomerOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,26 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ConfigserverApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.CustomerApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.EurekaserverApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.NotificationApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.OrderApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.PaymentApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.ProductApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/ecommerce-services/configserver/src/main/resources/config&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConfigserverApplication.executor": "Debug",
+    "Application.CustomerApplication.executor": "Debug",
+    "Application.EurekaserverApplication.executor": "Debug",
+    "Application.NotificationApplication.executor": "Debug",
+    "Application.OrderApplication.executor": "Debug",
+    "Application.PaymentApplication.executor": "Debug",
+    "Application.ProductApplication.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/ecommerce-services/gatewayserver",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2954023",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sabbir.product.model.dto" />
@@ -192,13 +187,22 @@
       <option name="project" value="LOCAL" />
       <updated>1738659985433</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;">
+      <option name="closed" value="true" />
+      <created>1738736013897</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738736013897</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Adding eureka server registration in Payment service&quot;" />
     <MESSAGE value="&quot;Fixing database insertion issue in paymentservice&quot;" />
     <MESSAGE value="&quot;Register order service in eureka server&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Register order service in eureka server&quot;" />
+    <MESSAGE value="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;" />
   </component>
 </project>
