@@ -115,7 +115,7 @@
 				<version>3.4.2</version>
 				<configuration>
 					<to>
-						<image>sabbir/${project.artifactId}:1</image>
+						<image>sabbir/${project.artifactId}:GrafanaAndLoki</image>
 					</to>
 				</configuration>
 			</plugin>
