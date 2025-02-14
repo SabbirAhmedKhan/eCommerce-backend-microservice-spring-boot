@@ -54,7 +54,6 @@ public class CustomerController {
 
     @GetMapping("/fetchCustomer/{mobileNumber}")
     public ResponseEntity<CustomerDto> fetchCustomer(@PathVariable String mobileNumber) {
-        System.out.println("delete called");
         return ResponseEntity.status(HttpStatus.OK).body(customerService.fetchCustomer(mobileNumber));
     }
 

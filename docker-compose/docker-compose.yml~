@@ -1,61 +1,91 @@
 services:
  ecommercedb:
-  image: mysql
   container_name: ecommercedb
   ports:
    - 3306:3306
   environment:
    MYSQL_DATABASE: ecommercedb
-   MYSQL_ROOT_PASSWORD: root
-  healthcheck:
-   test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-   interval: 10s
-   timeout: 10s
-   retries: 10
-   start_period: 20s
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
+
+ productdb:
+  container_name: productdb
+  ports:
+   - 3307:3306
+  environment:
+   MYSQL_DATABASE: productdb
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
+
+ orderdb:
+  container_name: orderdb
+  ports:
+   - 3308:3306
+  environment:
+   MYSQL_DATABASE: orderdb
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
+
+ paymentdb:
+  container_name: paymentdb
+  ports:
+   - 3309:3306
+  environment:
+   MYSQL_DATABASE: paymentdb
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
 
  configserver:
-  image: "sabbir/configserver:1"
+  image: "sabbir/configserver:GrafanaAndLoki"
   container_name: configserver-ms
   ports:
    - 8888:8888
   healthcheck:
-   test: "curl --fail --silent http://localhost:8888/actuator/health | grep UP || exit 1"
+   test: "curl --fail --silent http://localhost:8888/actuator/health/readiness | grep UP || exit 1"
    interval: 10s
    timeout: 5s
    retries: 10
    start_period: 10s
-  deploy:
-   resources:
-    limits:
-     memory: 700m
+  extends:
+   file: common-config.yml
+   service: microservice-base-config
 
  customer:
-  image: "sabbir/customer:1"
+  image: "sabbir/customer:GrafanaAndLoki"
   container_name: customer-ms
   ports:
    - 8080:8080
   environment:
    SPRING_APPLICATION_NAME: "customer"
-   SPRING_PROFILES_ACTIVE: default
-   SPRING_CONFIG_IMPORT: configserver:http://configserver:8888/
    SPRING_DATASOURCE_URL: jdbc:mysql://ecommercedb:3306/ecommercedb
    MYSQL_DATABASE: ecommercedb
-   SPRING_DATASOURCE_USERNAME: root
-   SPRING_DATASOURCE_PASSWORD: root
   depends_on:
    ecommercedb:
     condition: service_healthy
    configserver:
     condition: service_healthy
-  healthcheck:
-   test: "curl --fail --silent localhost:8081/actuator/health/readiness | grep UP || exit 1"
-   interval: 5s
-   timeout: 5s
-   retries: 10
-   start_period: 20s
-  deploy:
-   resources:
-    limits:
-     memory: 700m
+  extends:
+   file: common-config.yml
+   service: microservice-configserver-config
 
+ product:
+  image: "sabbir/product:GrafanaAndLoki"
+  container_name: product-ms
+  ports:
+   - 8050:8050
+  environment:
+   SPRING_APPLICATION_NAME: "product"
+   SPRING_DATASOURCE_URL: jdbc:mysql://productdb:3306/ecommercedb
+   MYSQL_DATABASE: productdb
+  depends_on:
+   ecommercedb:
+    condition: service_healthy
+   configserver:
+    condition: service_healthy
+  extends:
+   file: common-config.yml
+   service: microservice-configserver-config

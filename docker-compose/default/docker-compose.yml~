@@ -45,7 +45,7 @@ services:
   ports:
    - 8888:8888
   healthcheck:
-   test: "curl --fail --silent http://localhost:8888/actuator/health/readiness | grep UP || exit 1"
+   test: "curl --fail --silent http://localhost:8888/actuator/health | grep UP || exit 1"
    interval: 10s
    timeout: 5s
    retries: 10
@@ -90,7 +90,7 @@ services:
     condition: service_healthy
   extends:
    file: common-config.yml
-   service: microservice-configserver-config
+   service: microservice-eureka-config
 
  product:
   image: "sabbir/product:GrafanaAndLoki"
@@ -108,7 +108,7 @@ services:
     condition: service_healthy
   extends:
    file: common-config.yml
-   service: microservice-configserver-config
+   service: microservice-eureka-config
 
  order:
   image: "sabbir/order:GrafanaAndLoki"
@@ -126,7 +126,7 @@ services:
     condition: service_healthy
   extends:
    file: common-config.yml
-   service: microservice-configserver-config
+   service: microservice-eureka-config
 
  payment:
   image: "sabbir/payment:GrafanaAndLoki"
@@ -144,7 +144,7 @@ services:
     condition: service_healthy
   extends:
    file: common-config.yml
-   service: microservice-configserver-config
+   service: microservice-eureka-config
 
 networks:
  ecommerceNetwork:

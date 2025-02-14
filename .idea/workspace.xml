@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/eurekaserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/gatewayserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/gatewayserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/notification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/controller/CustomerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +50,12 @@
     &quot;Application.NotificationApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Application.OrderApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Application.PaymentApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.ProductApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ProductApplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/ecommerce-services/gatewayserver&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/docker-compose/qa&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
@@ -71,11 +67,11 @@
       <recent name="com.sabbir.product.model.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\qa" />
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\prod" />
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\default" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\configserver\src\main\resources\config" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\payment\src\main\java\com\sabbir\payment\exception" />
-      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\order\src\main\java\com\sabbir\order\model\dto" />
-      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\order\src\main\java\com\sabbir\order\exception" />
-      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\product\src\main\java\com\sabbir\product\model\dto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sabbir.payment.repository" />
@@ -83,20 +79,7 @@
       <recent name="com.sabbir.payment.audit" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OrderApplication">
-    <configuration name="ConfigserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sabbir.configserver.ConfigserverApplication" />
-      <module name="configserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sabbir.configserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.PaymentApplication">
     <configuration name="CustomerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sabbir.customer.CustomerApplication" />
       <module name="customer" />
@@ -123,19 +106,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotificationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sabbir.notification.NotificationApplication" />
-      <module name="notification" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sabbir.notification.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OrderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sabbir.order.OrderApplication" />
       <module name="order" />
@@ -149,13 +119,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PaymentApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.payment.PaymentApplication" />
+      <module name="payment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.payment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.product.ProductApplication" />
+      <module name="product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PaymentApplication" />
         <item itemvalue="Application.OrderApplication" />
+        <item itemvalue="Application.ProductApplication" />
         <item itemvalue="Application.CustomerApplication" />
         <item itemvalue="Application.EurekaserverApplication" />
-        <item itemvalue="Application.ConfigserverApplication" />
-        <item itemvalue="Application.NotificationApplication" />
       </list>
     </recent_temporary>
   </component>

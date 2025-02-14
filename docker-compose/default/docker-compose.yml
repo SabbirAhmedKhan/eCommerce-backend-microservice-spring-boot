@@ -1,0 +1,151 @@
+services:
+ customerdb:
+  container_name: customerdb
+  ports:
+   - 3306:3306
+  environment:
+   MYSQL_DATABASE: customerdb
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
+#
+# productdb:
+#  container_name: productdb
+#  ports:
+#   - 3307:3306
+#  environment:
+#   MYSQL_DATABASE: productdb
+#  extends:
+#   file: common-config.yml
+#   service: microservice-db-config
+#
+# orderdb:
+#  container_name: orderdb
+#  ports:
+#   - 3308:3306
+#  environment:
+#   MYSQL_DATABASE: orderdb
+#  extends:
+#   file: common-config.yml
+#   service: microservice-db-config
+#
+# paymentdb:
+#  container_name: paymentdb
+#  ports:
+#   - 3309:3306
+#  environment:
+#   MYSQL_DATABASE: paymentdb
+#  extends:
+#   file: common-config.yml
+#   service: microservice-db-config
+
+ configserver:
+  image: "sabbir/configserver:GrafanaAndLoki"
+  container_name: configserver-ms
+  ports:
+   - 8888:8888
+  healthcheck:
+   test: "curl --fail --silent http://localhost:8888/actuator/health | grep UP || exit 1"
+   interval: 10s
+   timeout: 5s
+   retries: 10
+   start_period: 10s
+  extends:
+   file: common-config.yml
+   service: microservice-base-config
+
+ eurekaserver:
+  image: "sabbir/eurekaserver:GrafanaAndLoki"
+  container_name: eurekaserver-ms
+  ports:
+   - 8070:8070
+  environment:
+   SPRING_APPLICATION_NAME: "eurekaserver"
+  depends_on:
+   configserver:
+    condition: service_healthy
+  healthcheck:
+   test: "curl --fail --silent http://localhost:8070/actuator/health/readiness | grep UP || exit 1"
+   interval: 10s
+   timeout: 5s
+   retries: 10
+   start_period: 10s
+  extends:
+   file: common-config.yml
+   service: microservice-configserver-config
+
+ customer:
+  image: "sabbir/customer:GrafanaAndLoki"
+  container_name: customer-ms
+  ports:
+   - 8080:8080
+  environment:
+   SPRING_APPLICATION_NAME: "customer"
+   SPRING_DATASOURCE_URL: jdbc:mysql://customerdb:3306/customerdb
+   MYSQL_DATABASE: customerdb
+  depends_on:
+   customerdb:
+    condition: service_healthy
+   configserver:
+    condition: service_healthy
+  extends:
+   file: common-config.yml
+   service: microservice-eureka-config
+#
+# product:
+#  image: "sabbir/product:GrafanaAndLoki"
+#  container_name: product-ms
+#  ports:
+#   - 8050:8050
+#  environment:
+#   SPRING_APPLICATION_NAME: "product"
+#   SPRING_DATASOURCE_URL: jdbc:mysql://productdb:3306/productdb
+#   MYSQL_DATABASE: productdb
+#  depends_on:
+#   productdb:
+#    condition: service_healthy
+#   configserver:
+#    condition: service_healthy
+#  extends:
+#   file: common-config.yml
+#   service: microservice-configserver-config
+#
+# order:
+#  image: "sabbir/order:GrafanaAndLoki"
+#  container_name: order-ms
+#  ports:
+#   - 8761:8761
+#  environment:
+#   SPRING_APPLICATION_NAME: "order"
+#   SPRING_DATASOURCE_URL: jdbc:mysql://orderdb:3306/orderdb
+#   MYSQL_DATABASE: orderdb
+#  depends_on:
+#   orderdb:
+#    condition: service_healthy
+#   configserver:
+#    condition: service_healthy
+#  extends:
+#   file: common-config.yml
+#   service: microservice-configserver-config
+#
+# payment:
+#  image: "sabbir/payment:GrafanaAndLoki"
+#  container_name: payment-ms
+#  ports:
+#   - 8060:8060
+#  environment:
+#   SPRING_APPLICATION_NAME: "payment"
+#   SPRING_DATASOURCE_URL: jdbc:mysql://paymentdb:3306/paymentdb
+#   MYSQL_DATABASE: paymentdb
+#  depends_on:
+#   paymentdb:
+#    condition: service_healthy
+#   configserver:
+#    condition: service_healthy
+#  extends:
+#   file: common-config.yml
+#   service: microservice-configserver-config
+
+networks:
+ ecommerceNetwork:
+  driver: "bridge"
