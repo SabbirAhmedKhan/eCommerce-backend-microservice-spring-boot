@@ -6,10 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/common-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/order.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/order.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/product.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/product.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/controller/CustomerLineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/controller/CustomerLineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/PaymentMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/PaymentClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/PaymentClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/ProductClientWithDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +34,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Record" />
         <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -42,44 +56,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ConfigserverApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.CustomerApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.EurekaserverApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.NotificationApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.OrderApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.PaymentApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.ProductApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/docker-compose/qa&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConfigserverApplication.executor": "Debug",
+    "Application.CustomerApplication.executor": "Debug",
+    "Application.EurekaserverApplication.executor": "Debug",
+    "Application.NotificationApplication.executor": "Debug",
+    "Application.OrderApplication.executor": "Debug",
+    "Application.PaymentApplication.executor": "Debug",
+    "Application.ProductApplication.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/docker-compose/observability/alloy",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2954023",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sabbir.product.model.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\observability\alloy" />
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\observability\loki" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\qa" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\prod" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\default" />
-      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\configserver\src\main\resources\config" />
-      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\payment\src\main\java\com\sabbir\payment\exception" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sabbir.order.messageBroker" />
       <recent name="com.sabbir.payment.repository" />
       <recent name="com.sabbir.payment.model.dto" />
       <recent name="com.sabbir.payment.audit" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PaymentApplication">
+  <component name="RunManager" selected="Application.OrderApplication">
     <configuration name="CustomerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sabbir.customer.CustomerApplication" />
       <module name="customer" />
@@ -147,10 +162,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PaymentApplication" />
         <item itemvalue="Application.OrderApplication" />
         <item itemvalue="Application.ProductApplication" />
         <item itemvalue="Application.CustomerApplication" />
+        <item itemvalue="Application.PaymentApplication" />
         <item itemvalue="Application.EurekaserverApplication" />
       </list>
     </recent_temporary>
@@ -205,5 +220,84 @@
     <MESSAGE value="&quot;Register order service in eureka server&quot;" />
     <MESSAGE value="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/exception/GlobalExceptionHandler.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/service/impl/PaymentServiceImpl.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/controller/PaymentController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>41</line>
+          <properties class="com.sabbir.payment.exception.GlobalExceptionHandler" method="handleGlobalException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>48</line>
+          <properties class="com.sabbir.payment.exception.GlobalExceptionHandler" method="handleResourceNotFoundException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

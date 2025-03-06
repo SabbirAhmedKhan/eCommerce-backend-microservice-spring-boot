@@ -1,7 +1,7 @@
 build:
     version: "3.0.0"
 
-customer:
+product:
     message: "Welcome to customer service"
     contactDetails:
         name: "sabbir"
@@ -10,3 +10,9 @@ customer:
     onCallSupport:
         - 012587
         - 012588
+
+application:
+    config:
+        customer-url: http://localhost:8222/api/v1/customers
+        payment-url: http://localhost:8222/api/v1/payments
+        product-url: http://localhost:8222/api/v1/products

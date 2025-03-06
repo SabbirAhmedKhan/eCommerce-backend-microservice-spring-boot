@@ -1,8 +1,9 @@
 package com.sabbir.order.model.dto;
 
 public enum PaymentMethod {
-    CASH,
-    CARD,
-    bKash,
-    Nagad
+    PAYPAL,
+    CREDIT_CARD,
+    VISA,
+    MASTER_CARD,
+    BITCOIN
 }

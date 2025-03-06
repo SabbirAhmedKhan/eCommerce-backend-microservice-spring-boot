@@ -52,7 +52,7 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
                 customer);
 
         //TODO: Call payment service
-        paymentClient.payment(paymetRequest);
+        //paymentClient.payment(paymetRequest);
 
         //TODO: Call payment service
 //        orderProducer.sendOrderConfirmation(new OrderConfirmation(

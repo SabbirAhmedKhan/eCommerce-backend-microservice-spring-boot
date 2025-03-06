@@ -50,7 +50,7 @@ public class ProductServiceImpl implements ProductService {
 
         List<Product> products = productRepository.findAllById(productIds);
         if(products.size() != products.size()){
-            throw new ProductPurchaseException("One or mor Product not found");
+            throw new ProductPurchaseException("One or more Product not found");
         }
 
         List<ProductPurchaseRequestDto> sortedProductRequestDto = productRequestDto

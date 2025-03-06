@@ -12,6 +12,7 @@ import io.micrometer.common.util.StringUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -42,6 +43,14 @@ public class CustomerServiceImpl implements CustomerService {
         return this.customerRepository.findByMobileNumber(mobileNumber)
                 .map(CustomerMapper::mapToCustomerDto)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer", "mobile Number", mobileNumber));
+    }
+
+    @Override
+    public List<CustomerDto> fetchAllCustomers(){
+        return this.customerRepository.findAll()
+                .stream()
+                .map(CustomerMapper::mapToCustomerDto)
+                .toList();
     }
 
     @Override

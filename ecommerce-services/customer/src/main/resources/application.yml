@@ -14,7 +14,7 @@ spring:
         generate-ddl: false
         hibernate:
 #            dialect: org.hibernate.dialect.MySQLDialect
-            ddl-auto: update
+            ddl-auto: create
         show-sql: true
         database-platform: org.hibernate.dialect.MySQLDialect
         open-in-view: false
