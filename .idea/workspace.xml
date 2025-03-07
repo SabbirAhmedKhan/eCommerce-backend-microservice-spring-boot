@@ -6,24 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/order.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/order.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/product.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/product.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/java/com/sabbir/customer/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/controller/CustomerLineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/controller/CustomerLineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/dto/PaymentMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/PaymentClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/PaymentClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/ProductClientWithDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/entity/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/entity/CustomerOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/java/com/sabbir/product/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/product/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,38 +231,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
-          <line>57</line>
+          <line>59</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/service/impl/PaymentServiceImpl.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/controller/PaymentController.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>

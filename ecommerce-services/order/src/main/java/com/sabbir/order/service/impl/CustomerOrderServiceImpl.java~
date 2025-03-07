@@ -13,6 +13,7 @@ import com.sabbir.order.restClient.ProductClient;
 import com.sabbir.order.service.CustomerLineService;
 import com.sabbir.order.service.CustomerOrderService;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.query.Order;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,6 +39,7 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
         List<PurchaseResponseDto> purchaseProducts = productClient.purchaseProducts(orderRequestDto.products()).orElseThrow(
                 () -> new ResourceNotFoundException("Product", "id", orderRequestDto.customerId().toString())
         );
+        System.out.println("Order: " + OrderMapper.mapToOrder(orderRequestDto));
 
         var order = customerOrderRepository.save(OrderMapper.mapToOrder(orderRequestDto));
 
@@ -52,7 +54,7 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
                 customer);
 
         //TODO: Call payment service
-        //paymentClient.payment(paymetRequest);
+        paymentClient.payment(paymetRequest);
 
         //TODO: Call payment service
 //        orderProducer.sendOrderConfirmation(new OrderConfirmation(
