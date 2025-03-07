@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/entity/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/model/entity/CustomerOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/payment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/payment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/notification/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/CustomerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/restClient/CustomerClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +21,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Record" />
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Record" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,42 +44,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ConfigserverApplication.executor": "Debug",
-    "Application.CustomerApplication.executor": "Debug",
-    "Application.EurekaserverApplication.executor": "Debug",
-    "Application.NotificationApplication.executor": "Debug",
-    "Application.OrderApplication.executor": "Debug",
-    "Application.PaymentApplication.executor": "Debug",
-    "Application.ProductApplication.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/docker-compose/observability/alloy",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2954023",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ConfigserverApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.CustomerApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.EurekaserverApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.NotificationApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.OrderApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.PaymentApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ProductApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java Sample Projects/eCommerce-backend-microservice-spring-boot/ecommerce-services/notification/src/main/resources/templates&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sabbir.product.model.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\notification\src\main\resources\templates" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\observability\alloy" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\observability\loki" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\qa" />
       <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\prod" />
-      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\default" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sabbir.notification.model.dto" />
+      <recent name="com.sabbir.notification.model.entity" />
       <recent name="com.sabbir.order.messageBroker" />
       <recent name="com.sabbir.payment.repository" />
       <recent name="com.sabbir.payment.model.dto" />
-      <recent name="com.sabbir.payment.audit" />
     </key>
   </component>
   <component name="RunManager" selected="Application.OrderApplication">
@@ -231,7 +235,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
-          <line>59</line>
+          <line>56</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">

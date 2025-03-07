@@ -51,7 +51,6 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
                 orderRequestDto.reference(),
                 customer);
 
-        //TODO: Call payment service
         paymentClient.payment(paymetRequest);
 
         //TODO: Call payment service
