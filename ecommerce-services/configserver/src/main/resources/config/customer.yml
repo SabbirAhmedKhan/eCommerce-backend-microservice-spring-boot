@@ -1,0 +1,12 @@
+build:
+    version: "1.0(default)"
+
+customer:
+    message: "Welcome to customer service, Hello(default)"
+    contactDetails:
+        name: "Sabbir Ahmed"
+        email: "sabbir@gmail.com"
+        mobileNumber: "01325698755"
+    onCallSupport:
+        - 01325698755
+        - 01963458223

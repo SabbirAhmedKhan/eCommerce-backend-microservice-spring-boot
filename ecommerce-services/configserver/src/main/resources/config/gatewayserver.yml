@@ -1,0 +1,29 @@
+server:
+ port: 8072
+
+eureka:
+ instance:
+  preferIpAddress: true
+ client:
+  fetchRegistry: true
+  registerWithEureka: true
+  serviceUrl:
+   defaultZone: http://localhost:8070/eureka/
+
+spring:
+ cloud:
+  gateway:
+   discovery:
+    locator:
+     enabled: true
+   routes:
+    - id: customer
+      uri: lb://customer
+      predicates:
+       - Path=/api/v1/customer/**
+    - id: product
+
+
+      uri: lb://product
+      predicates:
+       - Path=/api/v1/product/**

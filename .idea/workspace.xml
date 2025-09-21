@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/gatewayserver.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/configserver/src/main/resources/config/gatewayserver.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-services/customer/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2rxyIm9wlPI8kOMG4so5pQxvUs5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConfigserverApplication.executor": "Debug",
+    "Application.CustomerApplication.executor": "Debug",
+    "Application.EurekaserverApplication.executor": "Debug",
+    "Application.GatewayserverApplication.executor": "Debug",
+    "Application.NotificationApplication.executor": "Debug",
+    "Application.OrderApplication.executor": "Debug",
+    "Application.PaymentApplication.executor": "Debug",
+    "Application.ProductApplication.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/D folder/Java Sample Projects/doctor-finder/api_server",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2954023",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sabbir.product.model.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\ecommerce-services\notification\src\main\resources\templates" />
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\observability\alloy" />
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\observability\loki" />
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\qa" />
+      <recent name="D:\Java Sample Projects\eCommerce-backend-microservice-spring-boot\docker-compose\prod" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sabbir.notification.model.dto" />
+      <recent name="com.sabbir.notification.model.entity" />
+      <recent name="com.sabbir.order.messageBroker" />
+      <recent name="com.sabbir.payment.repository" />
+      <recent name="com.sabbir.payment.model.dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.EurekaserverApplication">
+    <configuration name="ConfigserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.configserver.ConfigserverApplication" />
+      <module name="configserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.eurekaserver.EurekaserverApplication" />
+      <module name="eurekaserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.gatewayserver.GatewayserverApplication" />
+      <module name="gatewayserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.gatewayserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.payment.PaymentApplication" />
+      <module name="payment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.payment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sabbir.product.ProductApplication" />
+      <module name="product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabbir.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EurekaserverApplication" />
+        <item itemvalue="Application.GatewayserverApplication" />
+        <item itemvalue="Application.ConfigserverApplication" />
+        <item itemvalue="Application.PaymentApplication" />
+        <item itemvalue="Application.ProductApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53b7ac22-4725-4c32-aaa0-ef18397b5d3f" name="Changes" comment="" />
+      <created>1737514943828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737514943828</updated>
+    </task>
+    <task id="LOCAL-00001" summary="&quot;Adding eureka server registration in Payment service&quot;">
+      <option name="closed" value="true" />
+      <created>1738577634137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738577634137</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;Fixing database insertion issue in paymentservice&quot;">
+      <option name="closed" value="true" />
+      <created>1738582244727</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738582244727</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&quot;Register order service in eureka server&quot;">
+      <option name="closed" value="true" />
+      <created>1738659985433</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738659985433</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;">
+      <option name="closed" value="true" />
+      <created>1738736013897</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738736013897</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Adding eureka server registration in Payment service&quot;" />
+    <MESSAGE value="&quot;Fixing database insertion issue in paymentservice&quot;" />
+    <MESSAGE value="&quot;Register order service in eureka server&quot;" />
+    <MESSAGE value="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Adding feign client in Order service to fetch customer related data using eureka server&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/exception/GlobalExceptionHandler.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ecommerce-services/order/src/main/java/com/sabbir/order/service/impl/CustomerOrderServiceImpl.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>41</line>
+          <properties class="com.sabbir.payment.exception.GlobalExceptionHandler" method="handleGlobalException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ecommerce-services/payment/src/main/java/com/sabbir/payment/exception/GlobalExceptionHandler.java</url>
+          <line>48</line>
+          <properties class="com.sabbir.payment.exception.GlobalExceptionHandler" method="handleResourceNotFoundException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

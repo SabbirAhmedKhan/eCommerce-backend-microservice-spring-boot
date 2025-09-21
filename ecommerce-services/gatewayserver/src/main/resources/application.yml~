@@ -1,0 +1,55 @@
+spring:
+ application:
+  name: "gatewayserver"
+ config:
+  import: "optional:configserver:http://localhost:8888/"
+
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
+ info:
+  env:
+   enabled: true
+ endpoint:
+  access: unrestricted
+  gateway:
+   access: unrestricted
+
+
+eureka:
+ instance:
+  preferIpAddress: true
+ client:
+  fetchRegistry: true
+  registerWithEureka: true
+  serviceUrl:
+   defaultZone: http://localhost:8070/eureka/
+
+info:
+ app:
+  name: "gatewayserver"
+  description: "Gateway server for ecommerce backend application"
+  version: "1.0.0"
+
+
+
+#build:
+#    version: "3.0.0"
+#
+#customer:
+#    message: "Welcome to customer service"
+#    contactDetails:
+#        name: "sabbir"
+#        email: "sabbir@in.com"
+#        phone: "1234567890"
+#    onCallSupport:
+#        - 012587
+#        - 012588
+
+
+#logging:
+#    level:
+#        org.hibernate: DEBUG
+#        org.springframework.orm.jpa: DEBUG

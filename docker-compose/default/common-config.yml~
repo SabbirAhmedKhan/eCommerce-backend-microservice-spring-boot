@@ -1,0 +1,46 @@
+services:
+ network-deploy-service:
+  networks:
+   - ecommerceNetwork
+
+ microservice-base-config:
+  extends:
+   service: network-deploy-service
+#  deploy:
+#   resources:
+#    limits:
+#     memory: 700m
+
+ microservice-db-config:
+  extends:
+   service: network-deploy-service
+  image: mysql
+  healthcheck:
+   test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+   interval: 10s
+   timeout: 10s
+   retries: 10
+   start_period: 20s
+  environment:
+   MYSQL_ROOT_PASSWORD: root
+   MYSQL_ROOT_USER: root
+
+ microservice-configserver-config:
+  extends:
+   service: microservice-base-config
+  environment:
+   SPRING_PROFILES_ACTIVE: default
+   SPRING_CONFIG_IMPORT: optional:configserver:http://configserver-ms:8888/
+   SPRING_DATASOURCE_USERNAME: root
+   SPRING_DATASOURCE_PASSWORD: root
+
+ microservice-eureka-config:
+  extends:
+   service: microservice-configserver-config
+  environment:
+#   EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE: http://eurekaserver-ms:8070/eureka/
+   EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
+
+
+
+

@@ -1,0 +1,2 @@
+package com.sabbir.customer.exception;public class ResourceNotFoundException {
+}

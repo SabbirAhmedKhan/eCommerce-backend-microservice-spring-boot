@@ -1,0 +1,85 @@
+package com.sabbir.product.service.impl;
+
+import com.sabbir.product.exception.ProductPurchaseException;
+import com.sabbir.product.exception.ResourceNotFoundException;
+import com.sabbir.product.mapper.ProductMapper;
+import com.sabbir.product.model.dto.ProductPurchaseRequestDto;
+import com.sabbir.product.model.dto.ProductPurchaseResponseDto;
+import com.sabbir.product.model.dto.ProductViewRequestDto;
+import com.sabbir.product.model.dto.ProductViewResponseDto;
+import com.sabbir.product.model.entity.Product;
+import com.sabbir.product.repository.ProductRepository;
+import com.sabbir.product.service.ProductService;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+@AllArgsConstructor
+public class ProductServiceImpl implements ProductService {
+
+    private ProductRepository productRepository;
+
+    @Override
+    public Long createProduct(ProductViewRequestDto productViewRequestDto) {
+        return productRepository.save(ProductMapper.mapToProduct(productViewRequestDto)).getProductId();
+    }
+
+    @Override
+//    @Transactional
+    public List<ProductViewResponseDto> findAll() {
+        return productRepository.findAll()
+                .stream()
+                .map(ProductMapper::mapToProductViewResponseDto)
+                .toList();
+    }
+
+    @Override
+    @Transactional(rollbackFor = ProductPurchaseException.class)
+    public List<ProductPurchaseResponseDto> purchaseProducts(List<ProductPurchaseRequestDto> productRequestDto) {
+
+        List<Long> productIds = productRequestDto
+                .stream()
+                .map(ProductPurchaseRequestDto::productId)
+                .collect(Collectors.toList());
+
+        List<Product> products = productRepository.findAllById(productIds);
+        if(products.size() != products.size()){
+            throw new ProductPurchaseException("One or more Product not found");
+        }
+
+        List<ProductPurchaseRequestDto> sortedProductRequestDto = productRequestDto
+                .stream()
+                .sorted((o1, o2) -> o1.productId().compareTo(o2.productId()))
+                .toList();
+        System.out.println("sortedProduct request dto = " + sortedProductRequestDto);
+
+        List<ProductPurchaseResponseDto> response = new ArrayList<>();
+        for(int i = 0; i < sortedProductRequestDto.size(); i++){
+            if(sortedProductRequestDto.get(i).quantity() > products.get(i).getQuantityAvailable()){
+                throw new ProductPurchaseException("Quantity not available");
+            }
+
+            products.get(i).setQuantityAvailable(products.get(i).getQuantityAvailable() - sortedProductRequestDto.get(i).quantity());
+
+            response.add(ProductMapper.mapToProductPurchaseResponseDto(products.get(i), sortedProductRequestDto.get(i).quantity()));
+        }
+        productRepository.saveAll(products);
+
+        return response;
+    }
+
+    @Override
+    public ProductViewResponseDto getProduct(Long productId) {
+        return productRepository.findById(productId)
+                .map(ProductMapper:: mapToProductViewResponseDto)
+                .orElseThrow(
+                        () -> new ResourceNotFoundException("Product", "id", productId.toString())
+                );
+    }
+}

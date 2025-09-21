@@ -1,0 +1,9 @@
+package com.sabbir.order.model.dto;
+
+public record CustomerResponseDto(
+        String firstname,
+        String lastname,
+        String email,
+        String mobileNumber
+) {
+}

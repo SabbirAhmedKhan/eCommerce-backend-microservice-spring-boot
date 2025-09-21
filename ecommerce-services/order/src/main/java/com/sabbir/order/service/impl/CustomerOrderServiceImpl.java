@@ -1,0 +1,87 @@
+package com.sabbir.order.service.impl;
+
+import com.sabbir.order.exception.ResourceNotFoundException;
+import com.sabbir.order.mapper.OrderMapper;
+import com.sabbir.order.messageBroker.OrderConfirmation;
+import com.sabbir.order.messageBroker.OrderProducer;
+import com.sabbir.order.model.dto.*;
+import com.sabbir.order.repository.CustomerLineRepository;
+import com.sabbir.order.repository.CustomerOrderRepository;
+import com.sabbir.order.restClient.CustomerClient;
+import com.sabbir.order.restClient.PaymentClient;
+import com.sabbir.order.restClient.ProductClient;
+import com.sabbir.order.service.CustomerLineService;
+import com.sabbir.order.service.CustomerOrderService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+public class CustomerOrderServiceImpl implements CustomerOrderService {
+    private final CustomerOrderRepository customerOrderRepository;
+    private final CustomerClient customerClient;
+    private final ProductClient productClient;
+    private final PaymentClient paymentClient;
+    private final CustomerLineService customerLineService;
+    private final OrderProducer orderProducer;
+
+    @Override
+    @Transactional
+    public Integer createOrder(OrderRequestDto orderRequestDto) {
+        CustomerResponseDto customer = customerClient.fetchCustomer(Long.valueOf(orderRequestDto.customerId())).orElseThrow(
+                () -> new ResourceNotFoundException("Customer", "id", orderRequestDto.customerId().toString())
+        );
+
+        List<PurchaseResponseDto> purchaseProducts = productClient.purchaseProducts(orderRequestDto.products()).orElseThrow(
+                () -> new ResourceNotFoundException("Product", "id", orderRequestDto.customerId().toString())
+        );
+
+        var order = customerOrderRepository.save(OrderMapper.mapToOrder(orderRequestDto));
+
+        for(PurchaseRequestDto purchaseRequest: orderRequestDto.products()){
+            customerLineService.saveCustomerLine(new OrderLineRequestDto(null, order.getId(),  purchaseRequest.productId(), purchaseRequest.quantity()));
+        }
+
+        var paymetRequest = new PaymentRequestDto(orderRequestDto.amount(),
+                orderRequestDto.paymentMethod(),
+                orderRequestDto.id(),
+                orderRequestDto.reference(),
+                customer);
+
+        paymentClient.payment(paymetRequest);
+
+        //TODO: Call payment service
+//        orderProducer.sendOrderConfirmation(new OrderConfirmation(
+//                orderRequestDto.reference(),
+//                orderRequestDto.amount(),
+//                orderRequestDto.paymentMethod(),
+//                customer,
+//                purchaseProducts
+//        ));
+
+        return order.getId();
+//        return customerOrderRepository.save(OrderMapper.mapToOrder(orderRequestDto)).getId();
+    }
+
+    @Override
+    public List<OrderResponseDto> findAllCustomerOrder() {
+        return customerOrderRepository.findAll().stream().map(OrderMapper::mapToOrderResponseDto).toList();
+//        return List.of();
+    }
+
+    @Override
+    public OrderResponseDto findCustomerOrderById(Integer id) {
+        return customerOrderRepository.findById(id).map(OrderMapper::mapToOrderResponseDto).orElseThrow(
+                ()-> new ResourceNotFoundException("Order", "id", id.toString()));
+    }
+
+    @Override
+    public CustomerResponseDto findCustomer(Long id) {
+        return customerClient.fetchCustomer(id).orElseThrow(
+                () -> new ResourceNotFoundException("Customer", "id", id.toString())
+        );
+    }
+}

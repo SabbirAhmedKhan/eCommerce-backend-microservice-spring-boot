@@ -1,0 +1,16 @@
+spring:
+ config:
+  activate:
+   on-profile: "qa"
+
+build:
+ version: "12.0"
+
+customer:
+ message: "Welcome to product service, Hello"
+ contactDetails:
+  name: "Sabbir Ahmed"
+  email: "sabbir@gmail.com"
+ onCallSupport:
+  - 01325698755
+  - 01963458223

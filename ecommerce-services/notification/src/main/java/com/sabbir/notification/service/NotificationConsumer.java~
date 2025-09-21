@@ -1,0 +1,26 @@
+package com.sabbir.notification.service;
+
+import com.sabbir.notification.model.dto.PaymentConfirmation;
+import com.sabbir.notification.model.entity.Notification;
+import com.sabbir.notification.repository.NotificationRepository;
+import jakarta.mail.MessagingException;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+import static java.lang.String.format;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class NotificationConsumer {
+
+    private final NotificationRepository notificationRepository;
+    private final EmailService emailService;
+
+    public void consumePaymentSuccessNotification(PaymentConfirmation paymentConfirmation) throws MessagingException{
+
+        log.info(format("Consuming the message from payment-topic Topic:: %s", paymentConfirmation));
+        notificationRepository.save(Notification.builder)
+    }
+}

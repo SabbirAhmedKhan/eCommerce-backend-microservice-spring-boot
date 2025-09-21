@@ -1,0 +1,91 @@
+services:
+ ecommercedb:
+  container_name: ecommercedb
+  ports:
+   - 3306:3306
+  environment:
+   MYSQL_DATABASE: ecommercedb
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
+
+ productdb:
+  container_name: productdb
+  ports:
+   - 3307:3306
+  environment:
+   MYSQL_DATABASE: productdb
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
+
+ orderdb:
+  container_name: orderdb
+  ports:
+   - 3308:3306
+  environment:
+   MYSQL_DATABASE: orderdb
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
+
+ paymentdb:
+  container_name: paymentdb
+  ports:
+   - 3309:3306
+  environment:
+   MYSQL_DATABASE: paymentdb
+  extends:
+   file: common-config.yml
+   service: microservice-db-config
+
+ configserver:
+  image: "sabbir/configserver:GrafanaAndLoki"
+  container_name: configserver-ms
+  ports:
+   - 8888:8888
+  healthcheck:
+   test: "curl --fail --silent http://localhost:8888/actuator/health/readiness | grep UP || exit 1"
+   interval: 10s
+   timeout: 5s
+   retries: 10
+   start_period: 10s
+  extends:
+   file: common-config.yml
+   service: microservice-base-config
+
+ customer:
+  image: "sabbir/customer:GrafanaAndLoki"
+  container_name: customer-ms
+  ports:
+   - 8080:8080
+  environment:
+   SPRING_APPLICATION_NAME: "customer"
+   SPRING_DATASOURCE_URL: jdbc:mysql://ecommercedb:3306/ecommercedb
+   MYSQL_DATABASE: ecommercedb
+  depends_on:
+   ecommercedb:
+    condition: service_healthy
+   configserver:
+    condition: service_healthy
+  extends:
+   file: common-config.yml
+   service: microservice-configserver-config
+
+ product:
+  image: "sabbir/product:GrafanaAndLoki"
+  container_name: product-ms
+  ports:
+   - 8050:8050
+  environment:
+   SPRING_APPLICATION_NAME: "product"
+   SPRING_DATASOURCE_URL: jdbc:mysql://productdb:3306/ecommercedb
+   MYSQL_DATABASE: productdb
+  depends_on:
+   ecommercedb:
+    condition: service_healthy
+   configserver:
+    condition: service_healthy
+  extends:
+   file: common-config.yml
+   service: microservice-configserver-config

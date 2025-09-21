@@ -1,0 +1,51 @@
+server:
+    port: 8050
+spring:
+    application:
+        name: "product"
+    profiles:
+        active: "prod"
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/product?createDatabaseIfNotExist=true&useSSL=false
+        username: root
+        password: root
+    jpa:
+        generate-ddl: false
+        hibernate:
+#            dialect: org.hibernate.dialect.MySQLDialect
+            ddl-auto: update
+        show-sql: true
+        database-platform: org.hibernate.dialect.MySQLDialect
+        open-in-view: false
+    config:
+        import: "optional:configserver:http://localhost:8888/"
+
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    info:
+        env:
+            enabled: true
+    endpoint:
+        access: unrestricted
+
+
+eureka:
+    instance:
+        preferIpAddress: true
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://localhost:8070/eureka/
+
+info:
+    app:
+        name: "Product"
+        description: "Product Service"
+        version: "1.0.0"
+
